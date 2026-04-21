@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎯 Complete Event Handling Demo | Interactive JavaScript</title>
+    <meta name="description" content="Comprehensive JavaScript Event Handling Demo with 15+ event types">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎯</text></svg>">
+</head>
+<body>
+    <div class="app" role="main">
+        <!-- Header -->
+        <header class="header">
+            <h1>🎯 <strong>Event Handling</strong> Demo</h1>
+            <p class="subtitle">Master 15+ JavaScript Events with Real-time Feedback</p>
+            <div class="stats">
+                <span id="eventCount">0</span> Events Captured
+                <button id="clearBtn" aria-label="Clear output">🗑️ Clear</button>
+            </div>
+        </header>
+
+        <div class="grid">
+            <!-- Basic Events -->
+            <section class="card" data-category="basic">
+                <h2>🔘 Basic Events</h2>
+                <div class="controls">
+                    <button id="clickBtn" class="btn-primary">Click Me</button>
+                    <button id="dblClickBtn" class="btn-secondary">Double Click</button>
+                </div>
+            </section>
+
+            <!-- Form Events -->
+            <section class="card" data-category="form">
+                <h2>📝 Form Events</h2>
+                <form id="demoForm" novalidate>
+                    <div class="form-group">
+                        <label for="nameInput">Name:</label>
+                        <input type="text" id="nameInput" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="emailInput">Email:</label>
+                        <input type="email" id="emailInput" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="selectInput">Favorite Color:</label>
+                        <select id="selectInput">
+                            <option value="">Choose...</option>
+                            <option value="red">🔴 Red</option>
+                            <option value="blue">🔵 Blue</option>
+                            <option value="green">🟢 Green</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn-success">Submit</button>
+                </form>
+            </section>
+
+            <!-- Keyboard Events -->
+            <section class="card" data-category="keyboard">
+                <h2>⌨️ Keyboard Events</h2>
+                <div class="input-group">
+                    <input type="text" id="keyupInput" placeholder="Type anything..." autocomplete="off">
+                    <div id="keyInfo" class="key-info">
+                        <span>Key: <strong>None</strong></span>
+                        <span>Code: <strong>None</strong></span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Mouse Events -->
+            <section class="card mouse-section" data-category="mouse">
+                <h2>🖱️ Mouse Events</h2>
+                <div class="mouse-container">
+                    <div id="mouseBox" class="mouse-box" tabindex="0">
+                        <span id="mouseCoords">Move mouse here</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Drag & Drop -->
+            <section class="card" data-category="drag">
+                <h2>✨ Drag & Drop</h2>
+                <div class="drag-area">
+                    <div class="draggable" draggable="true" id="draggable">Drag me! 🐱</div>
+                    <div class="dropzone" id="dropzone1">Drop here 1</div>
+                    <div class="dropzone" id="dropzone2">Drop here 2</div>
+                </div>
+            </section>
+
+            <!-- Touch/Mobile Events -->
+            <section class="card" data-category="touch">
+                <h2>📱 Touch Events</h2>
+                <div class="touch-area" id="touchArea">
+                    <p>Tap, swipe, or pinch on mobile!</p>
+                </div>
+            </section>
+
+            <!-- Advanced Events -->
+            <section class="card" data-category="advanced">
+                <h2>⚡ Advanced</h2>
+                <div class="advanced-controls">
+                    <input type="range" id="rangeInput" min="0" max="100" value="50">
+                    <div>Progress: <span id="rangeValue">50</span>%</div>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" id="toggleInput"> Toggle me</label>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Output Console -->
+        <section class="console" aria-live="polite">
+            <div class="console-header">
+                <h2>📊 Event Console</h2>
+                <div class="console-controls">
+                    <button id="pauseBtn" class="btn-small">⏸️ Pause</button>
+                    <button id="filterBtn" class="btn-small">Filter</button>
+                </div>
+            </div>
+            <div id="outputArea" class="output" tabindex="-1"></div>
+        </section>
+
+        <!-- Performance Monitor -->
+        <div class="performance" id="performance">
+            <span>FPS: <strong id="fps">60</strong></span>
+            <span>Memory: <strong id="memory">--</strong></span>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
