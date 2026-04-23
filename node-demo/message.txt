@@ -1,0 +1,6 @@
+🌟 Welcome to Node.js File System Demo! 🌟
+Timestamp: 4/23/2026, 11:17:22 AM
+Your custom message goes here!
+Line 1 ✅
+Line 2 ✅
+Line 3 ✅
